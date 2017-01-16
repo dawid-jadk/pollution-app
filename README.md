@@ -1,4 +1,4 @@
-#pollution-app
+#Pollution-app
 
 Pollution data visualisation application built for University project.
 Android application fetches pollution information from the server, which was stored by the pollution sensing device built using Arduino board. The purpose of this application was to represents how certain areas of London are polluted. The data is represented in terms of numbers and simple graphs allowing to compare how pollution has changed. The use of geographical location stored by the device allows the mobile application users to retrieve the most relevant pollution information closest to them. Additional home screen widget delivers fast access to important pollution information such as alerts when pollution levels are high. The application has been designed to work with only few of London boroughs, although it can be redesigned easily to work with more places. 
