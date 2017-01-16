@@ -1,0 +1,384 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/secondTab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jadkowski.dawid.pollutionapp.fragments.StatsFrag">
+
+    <jadkowski.dawid.pollutionapp.custom.VerticalScrollview
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="-20dp"
+        android:layout_marginRight="-20dp"
+        android:background="#262525"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/statHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/tab2_name"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/yearSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:layout_marginTop="10dp"
+                    android:entries="@array/year"
+                    android:prompt="@string/year"
+                    android:spinnerMode="dropdown"
+                    android:textColor="#ffffff" />
+            </FrameLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/boroughCard"
+                android:layout_width="fill_parent"
+                android:layout_height="365dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                cardview:cardBackgroundColor="#4eaf9c"
+                cardview:cardCornerRadius="6dp"
+                cardview:cardElevation="4dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="365dp"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:weightSum="1">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+
+                        <TextView
+                            android:id="@+id/boroStats"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|center_vertical"
+                            android:text="@string/stat_first_graph"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/select_borough"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#ffffff" />
+
+                        <Spinner
+                            android:id="@+id/firstSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center"
+                            android:layout_marginTop="15dp"
+                            android:entries="@array/borough"
+                            android:prompt="@string/borough"
+                            android:spinnerMode="dropdown"
+                            android:textColor="#ffffff" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/monthLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="365dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                cardview:cardBackgroundColor="#4eaf9c"
+                cardview:cardCornerRadius="6dp"
+                cardview:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="365dp"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:weightSum="1">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+
+                        <TextView
+                            android:id="@+id/descriptionMonth"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|center_vertical"
+                            android:text="@string/stat_second_graph"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/selectMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/select_month"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#ffffff" />
+
+                        <Spinner
+                            android:id="@+id/secondSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center"
+                            android:layout_marginTop="15dp"
+                            android:entries="@array/month_array"
+                            android:prompt="@string/month"
+                            android:spinnerMode="dropdown"
+                            android:textColor="#ffffff" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/boroughLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="365dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                cardview:cardBackgroundColor="#4eaf9c"
+                cardview:cardCornerRadius="6dp"
+                cardview:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="365dp"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:weightSum="1">
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:id="@+id/descriptionMap"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|center_vertical"
+                            android:text="@string/heat_map_name"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#ffffff" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/mapLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <fragment
+                            android:id="@+id/map"
+                            android:name="jadkowski.dawid.pollutionapp.maps.MapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/twoComparisonCard"
+                android:layout_width="fill_parent"
+                android:layout_height="365dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-1dp"
+                cardview:cardBackgroundColor="#4eaf9c"
+                cardview:cardCornerRadius="6dp"
+                cardview:cardElevation="4dp">
+
+                <LinearLayout
+                    android:id="@+id/twoComparisonLinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="365dp"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:weightSum="1">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+
+                        <TextView
+                            android:id="@+id/compareDatesStats"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|start"
+                            android:text="@string/daily_comp"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#ffffff" />
+
+                        <Button
+                            android:id="@+id/compareBtn"
+                            style="?android:attr/buttonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="top|end"
+                            android:layout_marginTop="-5dp"
+                            android:paddingBottom="0dp"
+                            android:paddingTop="0dp"
+                            android:text="@string/compare_str"
+                            android:textSize="12sp" />
+
+
+                        <TextView
+                            android:id="@+id/firstDayText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|start|center"
+                            android:text="@string/first_date"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#ffffff" />
+
+                        <Spinner
+                            android:id="@+id/firstDaySpinnerDay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginStart="48dp"
+                            android:entries="@array/day_array"
+                            android:prompt="@string/month"
+                            android:spinnerMode="dropdown"
+                            android:textColor="#ffffff" />
+
+                        <Spinner
+                            android:id="@+id/firstDaySpinnerMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|end|bottom"
+                            android:entries="@array/month_array"
+                            android:prompt="@string/month"
+                            android:spinnerMode="dropdown"
+                            android:textColor="#ffffff" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:id="@+id/secondDayText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|start"
+                            android:text="@string/second_date"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#ffffff" />
+
+                        <Spinner
+                            android:id="@+id/secondDaySpinnerMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|end"
+                            android:entries="@array/month_array"
+                            android:prompt="@string/month"
+                            android:spinnerMode="dropdown"
+                            android:textColor="#ffffff" />
+
+                        <Spinner
+                            android:id="@+id/secondDaySpinnerDay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|center"
+                            android:layout_marginStart="48dp"
+                            android:entries="@array/day_array"
+                            android:prompt="@string/month"
+                            android:spinnerMode="dropdown"
+                            android:textColor="#ffffff" />
+
+                    </FrameLayout>
+
+                        <RadioGroup
+                            android:id="@+id/radio_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/CO_radio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:enabled="true"
+                                android:text="@string/CO" />
+
+                            <RadioButton
+                                android:id="@+id/CH4_radio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/CH4" />
+
+                            <RadioButton
+                                android:id="@+id/LPG_radio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/LPG" />
+                        </RadioGroup>
+
+                    <FrameLayout
+                        android:id="@+id/dayComparisonLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </jadkowski.dawid.pollutionapp.custom.VerticalScrollview>
+
+</FrameLayout>

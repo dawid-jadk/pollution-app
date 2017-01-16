@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#55000000">
+
+    <ImageView
+        android:id="@+id/statusImageWidget"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="10dp"
+       />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/getting_data"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/actionButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/refresh"
+        android:background="#55000000"/>
+
+</LinearLayout>
